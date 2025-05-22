@@ -33,10 +33,6 @@ internal class Robot
         Age = age;
     }
 
-    public Robot()
-    {
-            
-    }
 
     public string GetName()
     {
