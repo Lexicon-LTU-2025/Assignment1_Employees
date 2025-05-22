@@ -25,6 +25,11 @@ internal class Robot
 
       public int Salary { get; private set; }
 
+    public static  void Count()
+    {
+       // int x = _age;
+    }
+
     //  public int SomeField;
 
     public Robot(string name, int age)

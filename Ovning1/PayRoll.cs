@@ -13,4 +13,10 @@ internal class PayRoll
         Employee employee = new Employee(name, salary);
         _employees.Add(employee);
     }
+
+    public List<Employee> GetEmployees()
+    {
+        //ToDo: Fix this not good!
+        return _employees;
+    }
 }
