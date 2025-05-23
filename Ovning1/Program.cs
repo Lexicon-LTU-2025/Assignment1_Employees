@@ -9,6 +9,25 @@ namespace Ovning1
 
         static void Main(string[] args)
         {
+            Employee kalle = new Employee("Kalle", 25000);
+            payRoll.AddEmployee(kalle);
+
+            var employees = payRoll.GetEmployees();
+            Console.WriteLine(employees[0].Name);
+
+            //employees = null;
+            //employees = new List<Employee>();
+            // employees.Add(new Employee("Anna", 35000));
+
+            employees[0].Name = "Anna";
+            
+            var after = payRoll.GetEmployees();
+            Console.WriteLine(after[0].Name);
+
+
+
+
+
             SeedData();
 
             do
@@ -38,10 +57,12 @@ namespace Ovning1
         private static void PrintEmployees()
         {
             List<Employee> employees = payRoll.GetEmployees();
+            //employees[0].Name = "Anna";
+            //employees.Add(new Employee("Nisse", 35));
 
             foreach (var employee in employees)
             {
-                Console.WriteLine($"Name: {employee.Name}, Salary {employee.Salary}");
+                Console.WriteLine(employee.Print());
             }
         }
 

@@ -1,4 +1,5 @@
-﻿namespace Ovning1;
+﻿
+namespace Ovning1;
 
 internal class PayRoll
 {
@@ -13,10 +14,15 @@ internal class PayRoll
         Employee employee = new Employee(name, salary);
         _employees.Add(employee);
     }
+    public void AddEmployee(Employee emp)
+    {
+        _employees.Add(emp);
+    }
 
     public List<Employee> GetEmployees()
     {
         //ToDo: Fix this not good!
-        return _employees;
+        return _employees.ToList();
     }
+
 }
