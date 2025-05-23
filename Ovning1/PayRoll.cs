@@ -19,7 +19,7 @@ internal class PayRoll
         _employees.Add(emp);
     }
 
-    public List<Employee> GetEmployees()
+    public IEnumerable<Employee> GetEmployees()
     {
         //ToDo: Fix this not good!
         return _employees.ToList();
