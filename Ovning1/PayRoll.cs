@@ -9,7 +9,7 @@ internal class PayRoll
         _employees = new List<Employee>();
     }
 
-    public void AddEmployee(string name, int salary)
+    public void AddEmployee(string name, uint salary)
     {
         Employee employee = new Employee(name, salary);
         _employees.Add(employee);

@@ -44,7 +44,7 @@ internal class Program
     private static void AddEmployee()
     {
         string name = Util.AskForString("Name");
-
+        uint salary = Util.AskForUInt("Salary");
        
     }
 
