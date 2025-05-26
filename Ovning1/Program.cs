@@ -4,6 +4,7 @@
 
 using Employees.Abstractions;
 using Employees.Helpers;
+using Ovning1.UI;
 using System.Runtime.CompilerServices;
 using System.Threading.Channels;
 
@@ -16,65 +17,11 @@ internal class Program
 
     static void Main(string[] args)
     {
-       
-        SeedData();
+        IPayRoll payRoll = new PayRoll();
+        IUI ui = new ConsoleUI();
 
-        do
-        {
-            ShowMainMeny();
+        Main main = new Main(ui, payRoll);
+        main.Run();
 
-            string input = _ui.GetInput();
-
-            switch (input)
-            {
-                case MenyHelpers.Add:
-                    AddEmployee();
-                    break; 
-                case MenyHelpers.Print:
-                    PrintEmployees();
-                    break; 
-                case MenyHelpers.Quit:
-                    Environment.Exit(0);
-                    break;
-                default:
-                    break;
-            }
-
-        } while (true);
-    }
-
-    private static void AddEmployee()
-    {
-        string name = Util.AskForString("Name");
-        uint salary = Util.AskForUInt("Salary");
-
-        _payRoll.AddEmployee(name, salary);
-       
-    }
-
-    private static void PrintEmployees()
-    {
-        IEnumerable<Employee> employees = _payRoll.GetEmployees();
-        
-        foreach (var employee in employees)
-        {
-            _ui.Print(employee.ToString());
-        }
-    }
-
-    private static void ShowMainMeny()
-    {
-        _ui.Print($"{MenyHelpers.Add}. Add");
-        _ui.Print($"{MenyHelpers.Print}. Print");
-        _ui.Print($"{MenyHelpers.Quit}. Quit");
-    }
-
-    private static void SeedData()
-    {
-        _payRoll.AddEmployee("Nisse", 12);
-        _payRoll.AddEmployee("Kalle", 60);
-        _payRoll.AddEmployee("Anna", 12);
-        _payRoll.AddEmployee("Olle", 500);
-        
     }
 }
