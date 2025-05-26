@@ -10,7 +10,7 @@ namespace Ovning1;
 
 internal class Program
 {
-    private static PayRoll payRoll = new PayRoll();
+    private static PayRoll _payRoll = new PayRoll();
 
     static void Main(string[] args)
     {
@@ -32,7 +32,7 @@ internal class Program
                     PrintEmployees();
                     break; 
                 case MenyHelpers.Quit:
-
+                    Environment.Exit(0);
                     break;
                 default:
                     break;
@@ -45,12 +45,14 @@ internal class Program
     {
         string name = Util.AskForString("Name");
         uint salary = Util.AskForUInt("Salary");
+
+        _payRoll.AddEmployee(name, salary);
        
     }
 
     private static void PrintEmployees()
     {
-        IEnumerable<Employee> employees = payRoll.GetEmployees();
+        IEnumerable<Employee> employees = _payRoll.GetEmployees();
         
         foreach (var employee in employees)
         {
@@ -67,10 +69,10 @@ internal class Program
 
     private static void SeedData()
     {
-        payRoll.AddEmployee("Nisse", 12);
-        payRoll.AddEmployee("Kalle", 60);
-        payRoll.AddEmployee("Anna", 12);
-        payRoll.AddEmployee("Olle", 500);
+        _payRoll.AddEmployee("Nisse", 12);
+        _payRoll.AddEmployee("Kalle", 60);
+        _payRoll.AddEmployee("Anna", 12);
+        _payRoll.AddEmployee("Olle", 500);
         
     }
 }
