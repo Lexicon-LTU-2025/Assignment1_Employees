@@ -56,7 +56,7 @@ internal class Program
         
         foreach (var employee in employees)
         {
-            Console.WriteLine(employee.Print());
+            Console.WriteLine(employee.ToString());
         }
     }
 

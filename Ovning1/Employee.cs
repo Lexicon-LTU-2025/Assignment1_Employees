@@ -1,6 +1,6 @@
 ﻿namespace Ovning1;
 
-internal class Employee
+internal class Employee : Object
 {
     public string Name { get; set; }
     public uint Salary { get; }
@@ -28,6 +28,9 @@ internal class Employee
         this.Salary = salary;
     }
 
-    public string Print() => $"Name: {Name}, Salary {Salary}";
-    
+   // public string Print() => $"Name: {Name}, Salary {Salary} Salarylevel: {SalaryLevel}";
+
+    public override string ToString() => $"Name: {Name}, Salary {Salary} Salarylevel: {SalaryLevel}";
+
+
 }
