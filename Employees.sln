@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Helpers", "Employ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Abstractions", "Employees.Abstractions\Employees.Abstractions.csproj", "{5556A8E7-156C-47C1-8A7D-76F274CAC702}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeesTests", "EmployeesTests\EmployeesTests.csproj", "{7DFBDCAD-F774-4959-9094-D7DB7F8A5B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFBDCAD-F774-4959-9094-D7DB7F8A5B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFBDCAD-F774-4959-9094-D7DB7F8A5B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFBDCAD-F774-4959-9094-D7DB7F8A5B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFBDCAD-F774-4959-9094-D7DB7F8A5B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
