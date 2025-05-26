@@ -14,25 +14,7 @@ internal class Program
 
     static void Main(string[] args)
     {
-        //Employee kalle = new Employee("Kalle", 25000);
-        //payRoll.AddEmployee(kalle);
-
-        //var employees = payRoll.GetEmployees();
-        //Console.WriteLine(employees[0].Name);
-
-        ////employees = null;
-        ////employees = new List<Employee>();
-        //// employees.Add(new Employee("Anna", 35000));
-
-        //employees[0].Name = "Anna";
-
-        //var after = payRoll.GetEmployees();
-        //Console.WriteLine(after[0].Name);
-
-
-
-
-
+       
         SeedData();
 
         do
@@ -69,9 +51,7 @@ internal class Program
     private static void PrintEmployees()
     {
         IEnumerable<Employee> employees = payRoll.GetEmployees();
-        //employees[0].Name = "Anna";
-        //employees.Add(new Employee("Nisse", 35));
-
+        
         foreach (var employee in employees)
         {
             Console.WriteLine(employee.Print());
