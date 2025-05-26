@@ -17,8 +17,9 @@ internal class PayRoll
     public void AddEmployee(Employee emp)
     {
         _employees.Add(emp);
-    }
-
+    } 
+     
+   
     public IEnumerable<Employee> GetEmployees()
     {
         //ToDo: Fix this not good!
