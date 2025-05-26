@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovning1", "Ovning1\Ovning1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Helpers", "Employees.Helpers\Employees.Helpers.csproj", "{D010BF88-E810-439B-987F-C54AB4CC0328}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Employees.Abstractions", "Employees.Abstractions\Employees.Abstractions.csproj", "{5556A8E7-156C-47C1-8A7D-76F274CAC702}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D010BF88-E810-439B-987F-C54AB4CC0328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D010BF88-E810-439B-987F-C54AB4CC0328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D010BF88-E810-439B-987F-C54AB4CC0328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5556A8E7-156C-47C1-8A7D-76F274CAC702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
