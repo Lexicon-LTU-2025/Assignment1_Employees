@@ -1,7 +1,14 @@
 ﻿
 namespace Ovning1;
 
-internal class PayRoll
+internal interface IPayRoll
+{
+    void AddEmployee(Employee emp);
+    void AddEmployee(string name, uint salary);
+    IEnumerable<Employee> GetEmployees();
+}
+
+internal class PayRoll : IPayRoll
 {
     private List<Employee> _employees;
     public PayRoll()
@@ -17,9 +24,9 @@ internal class PayRoll
     public void AddEmployee(Employee emp)
     {
         _employees.Add(emp);
-    } 
-     
-   
+    }
+
+
     public IEnumerable<Employee> GetEmployees()
     {
         //ToDo: Fix this not good!

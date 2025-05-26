@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Employees.Abstractions\Employees.Abstractions.csproj" />
     <ProjectReference Include="..\Employees.Helpers\Employees.Helpers.csproj" />
   </ItemGroup>
 

@@ -2,6 +2,7 @@
 
 
 
+using Employees.Abstractions;
 using Employees.Helpers;
 using System.Runtime.CompilerServices;
 using System.Threading.Channels;
@@ -10,7 +11,8 @@ namespace Ovning1;
 
 internal class Program
 {
-    private static PayRoll _payRoll = new PayRoll();
+    private static IPayRoll _payRoll = new PayRoll();
+    private static IUI _ui = new ConsoleUI();
 
     static void Main(string[] args)
     {
@@ -21,7 +23,7 @@ internal class Program
         {
             ShowMainMeny();
 
-            string input = Console.ReadLine() ?? string.Empty;
+            string input = _ui.GetInput();
 
             switch (input)
             {
@@ -56,15 +58,15 @@ internal class Program
         
         foreach (var employee in employees)
         {
-            Console.WriteLine(employee.ToString());
+            _ui.Print(employee.ToString());
         }
     }
 
     private static void ShowMainMeny()
     {
-        Console.WriteLine($"{MenyHelpers.Add}. Add");
-        Console.WriteLine($"{MenyHelpers.Print}. Print");
-        Console.WriteLine($"{MenyHelpers.Quit}. Quit");
+        _ui.Print($"{MenyHelpers.Add}. Add");
+        _ui.Print($"{MenyHelpers.Print}. Print");
+        _ui.Print($"{MenyHelpers.Quit}. Quit");
     }
 
     private static void SeedData()
