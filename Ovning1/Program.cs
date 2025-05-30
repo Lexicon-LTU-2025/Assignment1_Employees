@@ -19,8 +19,35 @@ internal class Program
     {
         IPayRoll payRoll = new PayRoll();
         IUI ui = new ConsoleUI();
-
         Main main = new Main(ui, payRoll);
+
+        try
+        {
+            var kalle = new Employee("Kalle", 25);
+            kalle.Name = null;
+            payRoll.AddEmployee(kalle);
+
+        }
+        catch (ArgumentNullException)
+        {
+
+
+        }
+        catch (ArgumentException)
+        {
+
+        }
+        catch (Exception ex)
+        { 
+             
+        }
+        finally
+        {
+            main.Run();
+        }
+
+
+
         main.Run();
 
     }

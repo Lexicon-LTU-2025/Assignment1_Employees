@@ -23,6 +23,10 @@ internal class Employee : Object
 
     public Employee(string name, uint salary)
     {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException($"'{nameof(name)}' cannot be null or whitespace.", nameof(name));
+        }
         //Validate
         this.Name = name;
         this.Salary = salary;

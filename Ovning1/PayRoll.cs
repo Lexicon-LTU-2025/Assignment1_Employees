@@ -1,4 +1,5 @@
 ﻿
+
 namespace Ovning1;
 
 internal interface IPayRoll
@@ -23,6 +24,13 @@ internal class PayRoll : IPayRoll
     }
     public void AddEmployee(Employee emp)
     {
+        ArgumentNullException.ThrowIfNull(emp, "emp");
+
+        //if (emp is null)
+        //{
+        //    throw new ArgumentNullException(nameof(emp));
+        //}
+
         _employees.Add(emp);
     }
 
