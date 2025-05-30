@@ -78,7 +78,7 @@ internal class Main
         _payRoll.AddEmployee("Kalle", 60);
         _payRoll.AddEmployee("Anna", 12);
         _payRoll.AddEmployee("Olle", 500);
-        _payRoll.AddEmployee("   ", 500);
+     //   _payRoll.AddEmployee("   ", 500);
 
     }
 }
