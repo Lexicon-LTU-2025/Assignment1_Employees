@@ -23,23 +23,23 @@ internal class Program
 
         try
         {
-            var kalle = new Employee("Kalle", 25);
-            kalle.Name = null;
-            payRoll.AddEmployee(kalle);
+
+            main.Run();
 
         }
         catch (ArgumentNullException)
         {
 
-
+            //...
+           
         }
         catch (ArgumentException)
         {
-
+            //..
         }
         catch (Exception ex)
-        { 
-             
+        {
+
         }
         finally
         {
@@ -48,7 +48,6 @@ internal class Program
 
 
 
-        main.Run();
 
     }
 }
