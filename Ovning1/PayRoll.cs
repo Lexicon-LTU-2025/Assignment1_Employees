@@ -12,6 +12,9 @@ internal interface IPayRoll
 internal class PayRoll : IPayRoll
 {
     private List<Employee> _employees;
+
+   // public AddMess AddMess { get; set; }
+
     public PayRoll()
     {
         _employees = new List<Employee>();

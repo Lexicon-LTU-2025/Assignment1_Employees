@@ -10,3 +10,5 @@ internal enum SalaryLevel
     Senior,
     Junior
 }
+
+public delegate void AddMess(string input);
