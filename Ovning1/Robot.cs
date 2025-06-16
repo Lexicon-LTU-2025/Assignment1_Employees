@@ -35,11 +35,16 @@ internal class Robot
         }
     }
 
+    public SalaryLevel SalaryLevel { get; set; }
+    public PayRoll PayRoll { get; set; }
+
+    public Action<string> AddMess { get; set; } =  Console.WriteLine;
+
     //2. Autoproperty om du inte behöver validera eller göra något, dvs skriva kod i gettern eller settern
     //Använd den här syntaxen istället för publika fält!
     //Här med private set värdet kan enbart sättas inifrån den här klassen
     //Snippet prop
-    public int Salary { get; private set; }
+    public int Salary { get; set; }
 
     //Statiskt metod gemensamt för alla instanser av klassen Robot.
     //Måste anropas med Robot.Count()

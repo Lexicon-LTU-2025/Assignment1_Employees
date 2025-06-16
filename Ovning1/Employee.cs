@@ -38,3 +38,11 @@ internal class Employee : Object
 
 
 }
+
+internal class Admin : Employee
+{
+    public Admin() :base("", (uint)25)
+    {
+        Name = "Hej";
+    }
+}

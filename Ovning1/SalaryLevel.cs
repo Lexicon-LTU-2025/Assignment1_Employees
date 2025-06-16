@@ -11,4 +11,12 @@ internal enum SalaryLevel
     Junior
 }
 
+internal enum NrOfWheels
+{
+   EttHjul = 1,
+
+    
+
+}
+
 public delegate void AddMess(string input);

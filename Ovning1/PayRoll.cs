@@ -22,6 +22,8 @@ internal class PayRoll : IPayRoll
 
     public void AddEmployee(string name, uint salary)
     {
+        //.....
+        //.Validate
         Employee employee = new Employee(name, salary);
         _employees.Add(employee);
     }

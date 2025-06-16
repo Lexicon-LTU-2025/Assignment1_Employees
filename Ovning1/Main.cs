@@ -20,6 +20,18 @@ internal class Main
 
     public void Run()
     {
+        //var rob = new Robot("", 25);
+        //rob.Age = 35;
+        //var robotAge = rob.Age;
+
+        var isOverFourChar = Util.AskForString("Enter something with 5 characters or more", _ui, s => s.Length > 4);
+        var isBetween2and6 = Util.AskForUInt("Between 2 and 6", _ui, 2, 6);
+
+
+        //rob.SalaryLevel = SalaryLevel.Senior;
+        //SalaryLevel robsSalarylevel = rob.SalaryLevel;
+
+
         SeedData();
 
         do

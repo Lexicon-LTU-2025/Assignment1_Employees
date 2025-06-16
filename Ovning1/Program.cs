@@ -17,9 +17,20 @@ internal class Program
 
     static void Main(string[] args)
     {
+
         IPayRoll payRoll = new PayRoll();
         IUI ui = new ConsoleUI();
         Main main = new Main(ui, payRoll);
+
+        //Util.AskForString("Over 10 char", ui, s =>
+        //{
+        //    //..
+        //    //..
+        //    var res = s.Length > 10;
+        //    return res;
+        //});
+
+
 
         try
         {
